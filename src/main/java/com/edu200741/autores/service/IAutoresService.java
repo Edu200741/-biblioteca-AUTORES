@@ -9,7 +9,7 @@ public interface IAutoresService {
     
     public void saveAutores(Autores autores);
     public void deleteAutores(Long id);
-    public void editAutores(Long id, Autores autores);
+    public void editAutores( Autores autores);
     public List<Autores> getAutores();
     public Autores findAutoresById(Long id);
     public List<Autores> findAutoresByLibros(String libros);

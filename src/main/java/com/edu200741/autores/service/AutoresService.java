@@ -21,22 +21,24 @@ public class AutoresService implements IAutoresService{
 
     @Override
     public void deleteAutores(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        repo.deleteById(id);
     }
 
     @Override
-    public void editAutores(Long id, Autores autores) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void editAutores( Autores autores) {
+        repo.save(autores);
     }
+        
+        
 
     @Override
     public List<Autores> getAutores() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return repo.findAll();
     }
 
     @Override
     public Autores findAutoresById(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return repo.findById(id).orElse(null);
     }
 
     @Override
